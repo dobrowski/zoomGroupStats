@@ -1,3 +1,6 @@
+# Modified from Andrew Knight, see below, by David Dobrowski
+
+
 ############################################################
 # Author: 			Andrew Knight (http://apknight.org)
 	
@@ -141,6 +144,7 @@ processZoomChat = function(fname, sessionStartDateTime, languageCode) {
 # NOTE: This is the file that accompanies a recording to the cloud. 
 
 # example call:				tr.out = processZoomTranscript(fname="~/Desktop/transcript.vtt", recordingStartTime="2020-04-01 17:56:34", languageCode="en")
+# example call:				tr.out = processZoomTranscript(fname="~/Desktop/transcript.vtt", recordingStartDateTime="2020-04-01 17:56:34", languageCode="en")
 
 # INPUT:
 # fname: 					the path to the local file where the transcript file (vtt) is saved.
@@ -164,7 +168,7 @@ processZoomChat = function(fname, sessionStartDateTime, languageCode) {
 # utterance_message:		the text of the utterance
 # utterance_language:		the language code for the transcript
 
-processZoomTranscript = function(fname, recordingStartDateTime, languageCode) {
+processZoomTranscript = function(fname , recordingStartDateTime = "2021-01-01 00:00:01", languageCode = "en") {
 	library(reshape2)
 	require(stringr)
 
