@@ -529,7 +529,7 @@ videoFaceAnalysis = function(inputVideo, recordingStartDateTime, sampleWindow, f
 ############################################################
 
 
-textConversationAnalysis = function(inputData, inputType, speakerId, sentiment=FALSE, sentiDone=FALSE) {
+textConversationAnalysis = function(inputData, inputType, speakerId = "user_name", sentiment=FALSE, sentiDone=FALSE) {
 	require(data.table)
 	########################################
 	# IF THE USER REQUESTED AN ANALYSIS OF A TRANSCRIPT FILE, DO THE FOLLOWING
